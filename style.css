@@ -1,0 +1,609 @@
+
+/* --- Your Existing Carousel & Hero Styles --- */
+
+
+.carousel {
+
+    margin-top: 50px;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    background: var(--glass-bg);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    padding: 20px 0;
+
+}
+
+
+
+.group {
+
+    display: flex;
+
+    gap: 20px;
+
+    padding-right: 20px;
+
+    animation: spin 10s linear infinite;
+
+}
+
+
+
+.card {
+
+    flex: 0 0 150px;
+
+    height: 80px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(0, 242, 254, 0.3);
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    color: var(--accent-cyan);
+
+    text-shadow: 0 0 5px var(--accent-cyan);
+
+}
+
+
+
+@keyframes spin {
+
+    from { transform: translateX(0); }
+
+    to { transform: translateX(-100%); }
+
+}
+
+.carousel:hover .group {
+
+    animation-play-state: paused;
+
+}
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+
+}
+
+
+
+:root {
+
+    --primary-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+
+    --accent-cyan: #00f2fe;
+
+    --accent-pink: #ee0979;
+
+    --glass-bg: rgba(255, 255, 255, 0.1);
+
+    --text-white: #e0e0e0;
+
+}
+
+
+
+body {
+
+    min-height: 100vh;
+
+    background: var(--primary-gradient);
+
+    color: var(--text-white);
+
+    line-height: 1.6;
+
+}
+
+
+
+/* --- Responsive Navbar Components (From Video) --- */
+
+
+
+/* --- Transparent Glass Navbar --- */
+
+nav {
+
+    background: rgba(15, 12, 41, 0.7); /* Translucent dark background */
+
+    backdrop-filter: blur(15px);      /* Frosted glass effect */
+
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 5%;
+
+    height: 70px;
+
+}
+
+
+
+/* Container for About, Work, Contact */
+
+.nav-links {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 1.5rem;
+
+    background: transparent; /* Ensures the list background is clear */
+
+}
+
+
+
+/* Individual Link Styling */
+
+.nav-links li a {
+
+    text-decoration: none;
+
+    color: var(--text-white);
+
+    font-weight: 500;
+
+    padding: 10px 15px;
+
+    background: transparent; /* Makes the links transparent to the navbar */
+
+    transition: 0.3s ease;
+    align-self: self-start;
+
+}
+
+
+
+/* Hover state for Work and Contact */
+
+.nav-links li a:hover {
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: var(--accent-cyan);
+
+    text-shadow: 0 0 10px var(--accent-cyan);
+
+    border-radius: 8px;
+
+}
+
+
+
+
+
+/* Logo specific styling */
+
+.logo a {
+
+    text-decoration: none;
+
+    font-size: 1.5rem;
+
+    font-weight: 800;
+
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+
+nav ul {
+
+    width: 100%;
+
+    list-style: none;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: left;
+
+}
+
+
+
+nav li {
+
+    height: 60px;
+
+    align-items: left;
+
+}
+
+
+
+nav a {
+
+    height: 100%;
+
+    padding: 0 20px;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    color: var(--text-white);
+
+    font-weight: 500;
+
+    transition: 0.3s;
+
+}
+
+
+
+nav a:hover {
+
+    background-color: rgba(255, 255, 255, 0.05);
+
+    color: var(--accent-cyan);
+
+}
+
+
+
+nav li:first-child {
+
+    margin-right: auto;
+
+}
+
+nav li:first-child a { font-size: 1.5rem; font-weight: 800; background: linear-gradient(to right, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+
+
+/* Sidebar Styling */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    height: 100vh;
+
+    width: 250px;
+
+    z-index: 999;
+
+    background-color: rgba(0, 0, 0, 0.5); /* Glass effect base */
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+
+    display: none; /* Hidden by default */
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: flex-start;
+
+}
+/* 3. Hero Section & FIXED GIF BACKGROUND */
+        .hero {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            /* Ensure the hero content stays above the background */
+            z-index: 1;
+            /* Prevents the background from overflowing during animations */
+            overflow: hidden; 
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* The live coding GIF in an infinite loop */
+            background-image: url('https://i.gifer.com/J4o.gif'); 
+            
+            /* Logic to keep it infinite and stationary */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+            /* This makes the GIF stay fixed in place while the page scrolls */
+            background-attachment: fixed;
+            
+            /* Low opacity to maintain the futuristic gradient aesthetic */
+            opacity: 0.18; 
+            z-index: -1;
+            
+            /* Smoothly blends the GIF into the dark theme */
+            filter: brightness(0.8) contrast(1.2);
+        }
+
+
+
+
+.hero h1 {
+
+    font-size: 4rem;
+
+    background: linear-gradient(to right, var(--accent-cyan), #ffffff);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 10px;
+
+}
+/* Section Content */
+
+.section-content {
+
+    padding: 5% 10px;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+
+/* Futuristic Project Cards */
+
+.projects {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+
+    margin-top: 40px;
+
+    color: white;
+
+}
+
+
+
+.project {
+
+    background: var(--glass-bg);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    transition: 0.4s;
+
+    cursor: pointer;
+
+    color: white;
+
+}
+
+
+
+.project:hover {
+
+    transform: translateY(-10px);
+
+    border-color: var(--accent-cyan);
+
+    box-shadow: 0 10px 30px rgba(0, 242, 254, 0.2);
+
+}
+
+
+
+.project h3 { color: var(--accent-cyan); margin-bottom: 10px; }
+
+
+
+/* Footer */
+
+footer {
+
+    padding: 50px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: rgba(0,0,0,0.3);
+
+}
+
+
+
+
+
+.sidebar li {
+
+    width: 100%;
+
+}
+
+
+
+.sidebar a {
+
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+/* --- Media Queries (The "Responsive" Logic) --- */
+
+
+
+@media(max-width: 800px) {
+
+    .hideOnMobile {
+
+        display: none; /* Hides desktop links [00:13:20] */
+
+    }
+
+    .menu-button {
+
+        display: block; /* Shows hamburger menu [00:14:52] */
+
+    }
+
+}
+
+
+
+@media(max-width: 400px) {
+
+    .sidebar {
+
+        width: 100%; /* Full screen sidebar for very small phones [00:14:19] */
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* ... rest of your project and section styles ... */
+
+svg { fill: var(--text-white); }
+
+.social-links {
+
+    display: flex;
+
+    justify-content: center; /* Centers the whole group */
+
+    align-items: center;     /* Aligns them vertically */
+
+    gap: 40px;               /* This creates the EXACT even spacing between each */
+
+    margin: 40px 0;
+
+    list-style: none;
+
+}
+
+
+
+.social-links a {
+
+    text-decoration: none;   /* Removes any blue underlines */
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+
+/* Ensure all icons have the same scale */
+
+.social-links svg {
+
+    width: 35px;
+
+    height: 35px;
+
+    fill: var(--text-white); /* Keeps colors consistent */
+
+    transition: fill 0.3s, filter 0.3s;
+
+}
+
+
+
+.social-links a:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+
+.social-links a:hover svg {
+
+    fill: var(--accent-cyan);
+
+    filter: drop-shadow(0 0 8px var(--accent-cyan));
+
+}

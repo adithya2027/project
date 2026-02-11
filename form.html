@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Student Registration</title>
+        <style>
+            form{
+                display: grid;
+                gap:12px;
+                grid-template-columns: 150px 250px;
+                align-items: center;
+                justify-content: center;
+            }
+            label{
+                text-align: right;
+            }
+            textarea{
+                resize: none;
+            }
+            .btn-row{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                justify-self: center;
+                width: 250px;
+            }
+            .tbn-left{
+                text-align: left;
+            }
+            .btn-right{
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> student registration</h1>
+        <p align="right"> location:mangalore </p>
+        <p align="right"> 2025-01-24 </p>
+        <p style="background-color: green ;padding:20px;color: white;"> student data </p>
+    <form>
+        <label> Name:</label>
+        <input type="text">
+        <label> surname </label>
+        <input type="text"> 
+         <label> date </label>
+        <input type="date">
+            <label> sex </label>
+            <div>
+        <input type="radio" name="male" value="gender">male
+                 <input type="radio" name="female " value="gender">female
+                 </div>
+        <label> phone:</label>
+        <input type="number">
+        <label> email:</label>
+        <input type="email">
+        <label> address</label>
+        <textarea rows="3" cols="10"></textarea>
+        <label> 10th marks card :</label>
+        <input type="file">
+        <label> 12th marks card :</label>
+        <input type="file">
+        <label> course </label>
+        <select>
+            <option> bca </option>
+            <option> bsc </option>
+            <option> bcom </option>
+        </select>
+        <label> </label>
+        <div>
+        <input type="checkbox"><a href="google.com"> I agree to the terms and conditions </a> 
+        </div>
+        <label> </label>
+        <div class="btn-row">
+            <div class="btn-left">
+        <input type="reset" name="reset">
+        </div>
+        <div class="btn-right">
+        <input type="submit" name="submit">
+        </div>
+    </div>
+    </form> 
+    </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo"><a href="#">ADITHYA </a></div>
+        <div>
+        <header>
+        <nav>
+            <ul class="nav-links"><br>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <ul class="sidebar">
+        <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="login.html">Login</a></li> </ul>
+
+    <ul>
+        <li class="hideOnMobile"><a href="product.html">Products</a></li>
+        <li class="hideOnMobile"><a href="about.html">About</a></li>
+        <li class="hideOnMobile"><a href="forum.html">Forum</a></li>
+        <li class="hideOnMobile"><a href="login.html">Login</a></li> <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+</nav>
+</div>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
+    <!-- Hero / Intro Section -->
+    <section class="hero">
+        <div class="intro">
+            <h1>Hello 👋</h1>
+            <p>I'm a Computer Science Student </p>
+            <p> this is my project for Web Development</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-content">
+        <h2>About Me</h2>
+        <h5>I am a dedicated Computer Science student and aspiring web architect focused on blending high-end glassmorphism aesthetics with  functional code.</h5>
+        <br><h4> My specalities are:</h4>
+        
+        <div class="carousel">
+            <div class="group">
+                <div class="card">HTML</div>
+                <div class="card">CSS</div>
+                <div class="card">C</div>
+                <div class="card">PYTHON</div>
+                <div class="card">JAVA</div>
+                <div class="card">R and Tableau</div>
+                <div class="card">DSA</div>
+            </div>
+            <div class="group" aria-hidden="true">
+                <div class="card">HTML</div>
+                <div class="card">CSS</div>
+                <div class="card">C</div>
+                <div class="card">PYTHON</div>
+                <div class="card">JAVA</div>
+                <div class="card">R and Tableau</div>
+                <div class="card">DSA</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work / Projects -->
+    <section id="work" class="section-content">
+        <h2>My Work</h2>
+        <a href="form.html">
+        <div class="projects">
+            <div class="project">
+                
+                <h3>Student Registration System</h3>
+                <p>A web-based system for managing student registrations and course enrollments.</p>
+            </div>
+        </a>
+        <a href="profile.html">
+            <div class="project">
+                <h3>Resume </h3>
+                <p>My personal Resume.</p><br>
+            </div>
+            </a>
+        </div>
+    </section>
+    <footer>
+<section id="contact" class="section-content">
+    <h2>Contact Me</h2>
+    <p>Let's build something together!</p>
+    
+    <div class="social-links">
+        <a href="mailto:adityasirsat2006@example.com" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+        </a>
+
+        <a href="https://github.com/adithya2027" target="_blank" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.011-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+
+        <a href="https://wa.me/9113933179" target="_blank" title="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.891-11.891 3.181 0 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.403 0 6.556-5.332 11.891-11.891 11.891-2.093 0-4.141-.544-5.948-1.587l-6.048 1.587zm5.883-4.032l.363.216c1.71 1.014 3.684 1.55 5.716 1.55 5.44 0 9.865-4.426 9.865-9.864 0-2.641-1.028-5.122-2.895-6.988-1.865-1.867-4.348-2.896-6.97-2.896-5.44 0-9.865 4.426-9.865 9.864 0 2.109.669 4.121 1.923 5.842l.237.324-1.003 3.66 3.754-.985zm11.587-6.083c-.03-.048-.11-.077-.231-.138-.12-.06-.713-.351-.823-.392-.11-.04-.191-.06-.271.06s-.312.391-.382.472-.14.09-.261.03c-.12-.06-.508-.187-.967-.597-.357-.318-.598-.711-.668-.831-.07-.12-.008-.185.052-.244.054-.054.12-.138.18-.208.06-.07.08-.12.12-.2.04-.08.02-.15-.01-.21-.03-.06-.271-.653-.371-.893-.097-.236-.197-.204-.271-.208l-.231-.004c-.08 0-.211.03-.322.15-.11.12-.422.412-.422 1.004 0 .592.432 1.164.492 1.244.06.08 0 1.91.891 2.29.213.09.431.144.651.159.207.01.403.01.554-.012.16-.023.513-.21.583-.412.07-.201.07-.372.05-.402z"/></svg>
+        </a>
+
+        <a href="https://instagram.com/adi_thya0001" target="_blank" title="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+    </div>
+</section>
+</footer>
+</body>
+</html>

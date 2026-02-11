@@ -1,0 +1,201 @@
+/* Using your defined variables for consistency */
+:root {
+    --primary-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    --accent-cyan: #00f2fe;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+}
+
+.login-body {
+    background: var(--primary-gradient); /* Same background as your main page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-container {
+    background: rgba(15, 12, 41, 0.7); /* Matching your navbar transparency */
+    backdrop-filter: blur(15px);       /* Matching your navbar blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.1); /* Subtle cyan glow */
+}
+
+.auth-container h2 {
+    /* Using your logo's text gradient style */
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+/* Futuristic Inputs */
+.input-group input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-white);
+    border-radius: 10px;
+    padding: 12px;
+    width: 100%;
+}
+
+.input-group input:focus {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 10px var(--accent-cyan); /* Active glowing state */
+    outline: none;
+}
+
+/* Auth Button using Cyan Gradient */
+.auth-btn {
+    background: linear-gradient(to right, var(--accent-cyan), #4facfe);
+    color: #0f0c29; /* Dark text for contrast against bright button */
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    box-shadow: 0 0 20px var(--accent-cyan);
+    transform: scale(1.02);
+}
+
+.auth-container label {
+    color: var(--accent-cyan);
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Specific background for login page */
+.login-body {
+    background: var(--primary-gradient);
+    display: flex;
+    flex-direction: column; /* Stack Nav on top of Auth Container */
+    justify-content: flex-start; /* Start from the top */
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Centering the Auth Container below the Nav */
+.auth-container {
+    margin-top: auto;   /* Pushes from top */
+    margin-bottom: auto; /* Pushes from bottom */
+    /* This combo centers the box in the remaining space */
+    
+    background: rgba(15, 12, 41, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--accent-cyan);
+    font-size: 2rem;
+    text-shadow: 0 0 10px var(--accent-cyan);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, var(--accent-cyan), #4facfe);
+    border: none;
+    border-radius: 8px;
+    color: #0f0c29;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+}
+
+.auth-container p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.auth-container label {
+    color: var(--accent-cyan);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* --- Toggle Logic (The Hack) --- */
+.toggle-checkbox {
+    display: none;
+}
+
+.sign-up-form {
+    display: none; /* Hide Sign Up by default */
+}
+
+/* When checkbox is checked, switch forms */
+#toggle:checked ~ .form-box .sign-in-form {
+    display: none;
+}
+
+#toggle:checked ~ .form-box .sign-up-form {
+    display: block;
+}
+/* Navigation Bar Styling */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(15, 12, 41, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky; /* Keep it at the top */
+    top: 0;
+    z-index: 1000;
+}
+.nav-links {
+    list-style: none;
+}
+.nav-links a, .logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-cyan);
+}
+/* Centering the Auth Container below the Nav */

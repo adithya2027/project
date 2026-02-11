@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Adithya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body class="about-body">
+    <!-- Navigation -->
+     <nav>
+        <div class="logo"><a href="#">ADITHYA </a></div><hr>
+        <ul class="sidebar">
+        <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="project.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="login.html">Login</a></li> </ul>
+
+    <ul>
+        <li><a href="project.html">Home</a></li>
+        <li class="hideOnMobile"><a href="product.html">Products</a></li>
+        <li class="hideOnMobile"><a href="forum.html">Forum</a></li>
+        <li class="hideOnMobile"><a href="login.html">Login</a></li> <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+</nav>
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
+
+    <main class="about-container">
+        <header class="about-hero">
+            <h1>Decoding <span>Adithya</span></h1>
+            <p>Computer Science Student | Tech Enthusiast</p>
+        </header>
+
+        <div class="about-grid">
+            <section class="about-card">
+                <div class="icon-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#00f2fe"><path d="M480-120 80-310l60-28 340 161 340-161 60 28-400 190Zm0-161L140-442l-60-28 400-190 400 190-60 28-340 161Zm0-221L140-702l340-161 340 161-340 161Z"/></svg>
+                    <h3>Qualifications</h3>
+                </div>
+                <ul>
+                    <li><strong>BCA in Computer Applications</strong> - Currently Pursuing</li>
+                    <li><strong>Web Development Certification</strong> - Advanced CSS & HTML</li>
+                    <li><strong>C Specialist</strong> - Data Structures & Algorithms</li>
+                </ul>
+            </section>
+
+            <section class="about-card">
+                <div class="icon-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#00f2fe"><path d="m354-247 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-80l65-281L80-550l288-25 112-265 112 265 288 25-218 189 65 281-247-149L233-80Z"/></svg>
+                    <h3>Interests & Hobbies</h3>
+                </div>
+                <div class="hobby-tags">
+                    <span>Software Development</span>
+                    <span>Cybersecurity</span>
+                    <span>Gaming</span>
+                    <span>Travelling</span>
+                </div>
+            </section>
+
+            <section class="about-card full-width">
+                <h3>Why I am i Interested in web programming</h3>
+                <p>To me, a web page isn't just a document; it's a living, breathing digital interface between a human and a machine. I create web pages because I love the <strong>immediate impact</strong> of code. There is something magical about typing lines of logic and seeing a vibrant, interactive universe materialize on a screen instantly. Which is universal to all the Users.</p>
+                <p>I aim to blend high-end aesthetics with seamless functionality, ensuring that the future of the internet is as beautiful as it is powerful.</p>
+            </section>
+        </div>
+        <section class="about-card full-width">
+    <div class="icon-header">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#00f2fe"><path d="M160-160v-80h640v80H160Zm0-160v-80h440v80H160Zm0-160v-80h640v80H160Zm0-160v-80h440v80H160Z"/></svg>
+        <h3>Technical Arsenal</h3>
+    </div>
+    <div class="tech-stack">
+        <div class="tech-item">
+            <span>Frontend</span>
+            <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+        </div>
+        <div class="tech-item">
+            <span>Backend (Python/C:Dont really know much about backend)</span>
+            <div class="progress-bar"><div class="progress" style="width: 10%"></div></div>
+        </div>
+        <div class="tech-item">
+            <span>UI/UX Design</span>
+            <div class="progress-bar"><div class="progress" style="width: 35%"></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="about-card">
+    <h3>The Vision</h3>
+    <p>I believe in <strong>Accessible Innovation</strong>. My goal is to build tools that are not only powerful but intuitive enough for anyone to use. I am currently exploring how AI can be integrated into web interfaces to create more personalized user experiences.</p>
+</section>
+
+<section class="about-card">
+    <h3>Current Learning</h3>
+    <p>Right now, I am deep-diving into <strong>Python,PHP,Ruby,Java</strong> and <strong>Three.js, MySQL,JSON Web Tokens</strong> to bring 3D elements into the browser. I am also experimenting with cybersecurity protocols to ensure the web pages I build are secure and reliable.</p>
+</section>
+    </main>
+</body>
+</html>
